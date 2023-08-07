@@ -10,3 +10,8 @@ export default {
     props: ['page']
 }
 </script>
+
+<!-- Adding the 'scoped' attribute limits the scope of the defined styles to this component -->
+<style scoped>
+
+</style>

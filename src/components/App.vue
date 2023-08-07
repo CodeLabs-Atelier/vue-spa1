@@ -2,7 +2,7 @@
     <navbar
         :pages="pages"
         :activePages="activePage"
-        :nav-link-click="(index) => activePage = index"
+        :nav-link-click="navLinkClick"
     >
     </navbar>
 
@@ -41,6 +41,22 @@ export default {
                 }
             ]
         };
+    },
+    methods : {
+        navLinkClick(index) {
+            // The below CtoP function definition was previously bound to the child attribute ...
+            // ... however you can pull it out and define it down here in the methods option ...
+            // ... which is advisable because method definitions can be lengthy and then the ...
+            // ... definition is still bound to the attribute, just by the method name here now.
+            //:nav-link-click="(index) => activePage = index"
+
+            this.activePage = index
+        }
     }
 }
 </script>
+
+<!-- Adding the 'scoped' attribute limits the scope of the defined styles to this component -->
+<style scoped>
+
+</style>
